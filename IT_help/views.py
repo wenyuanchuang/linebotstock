@@ -77,7 +77,7 @@ def findStock(number):
                 else:
                     eachResponse = maps[i] + ": " + data["msgArray"][0][columns[i]] + '\n'
                 totalResponse += eachResponse
-            eachResponse = "漲跌百分比: " + count_per(data["msgArray"][0]['z'], data["msgArray"][0]['y']) + '\n輸入其他股票代碼以繼續查詢。
+            eachResponse = "漲跌百分比: " + count_per(data["msgArray"][0]['z'], data["msgArray"][0]['y']) + '\n輸入其他股票代碼以繼續查詢。'
          
             totalResponse += eachResponse
             return totalResponse

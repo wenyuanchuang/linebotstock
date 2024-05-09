@@ -1,1 +1,1 @@
-web: gunicorn IT_Helper.wsgi
+web: gunicorn IT_help.wsgi

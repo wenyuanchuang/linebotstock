@@ -77,12 +77,12 @@ def findStock(number):
                 else:
                     eachResponse = maps[i] + ": " + data["msgArray"][0][columns[i]] + '\n'
                 totalResponse += eachResponse
-            eachResponse = "漲跌百分比: " + count_per(data["msgArray"][0]['z'], data["msgArray"][0]['y']) + '\n輸入其他股票代碼以繼續查詢。'
+            eachResponse = "漲跌百分比: " + count_per(data["msgArray"][0]['z'], data["msgArray"][0]['y']) + '\n輸入其他股票代碼以繼續查詢。\n\n提醒您，若無即時回應代表伺服器正在重啟，請等1分鐘之後重新傳送股票代碼'
          
             totalResponse += eachResponse
             return totalResponse
         else:
-            return '取得股票資訊失敗，請重新輸入股票代碼'
+            return '取得股票資訊失敗，請重新輸入股票代碼\n\n提醒您，若無即時回應代表伺服器正在重啟，請等1分鐘之後重新傳送股票代碼'
     except json.JSONDecodeError as e:
         print(f'JSON decoding error: {e}')
         return "JSON decoding error"

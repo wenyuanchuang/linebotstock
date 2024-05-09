@@ -54,7 +54,8 @@ def findStock(number):
         query_url = f'http://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_{number}.tw'
 
     # 呼叫股票資訊API
-    response = requests.get(query_url)
+    response = requests.get(url, verify=False)
+    # response = requests.get(query_url)
 
     # 判斷該API呼叫是否成功
     if response.status_code != 200:
